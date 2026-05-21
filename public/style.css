@@ -1,0 +1,186 @@
+/* ================= LOGIN ================= */
+.login-body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: #075e54;
+font-family: Arial;
+}
+
+.login-card {
+background: white;
+padding: 30px;
+border-radius: 10px;
+width: 300px;
+text-align: center;
+}
+
+.login-card input {
+width: 90%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+
+.login-card button {
+width: 100%;
+padding: 10px;
+background: #25d366;
+border: none;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+}
+
+/* ================= APP ================= */
+body {
+margin: 0;
+font-family: Arial;
+background: #e5ddd5;
+}
+
+.app {
+max-width: 500px;
+height: 95vh;
+margin: auto;
+display: flex;
+flex-direction: column;
+background: #efeae2;
+}
+
+/* ================= HEADER ================= */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #075e54;
+color: white;
+padding: 10px;
+}
+
+.left {
+display: flex;
+align-items: center;
+}
+
+.avatar {
+font-size: 24px;
+margin-right: 10px;
+}
+
+.name {
+font-weight: bold;
+}
+
+.status {
+font-size: 12px;
+color: #d3d3d3;
+}
+
+.logout {
+background: red;
+border: none;
+padding: 5px 10px;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* ================= MESSAGES ================= */
+.messages {
+flex: 1;
+padding: 10px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+}
+
+/* ================= MESSAGE ================= */
+.message {
+max-width: 70%;
+padding: 10px;
+margin: 5px;
+border-radius: 10px;
+font-size: 14px;
+position: relative;
+}
+
+/* Sent */
+.sent {
+align-self: flex-end;
+background: #dcf8c6;
+}
+
+/* Received */
+.received {
+align-self: flex-start;
+background: white;
+}
+
+/* Tick */
+.status {
+font-size: 10px;
+text-align: right;
+margin-top: 5px;
+}
+
+/* ================= TYPING ================= */
+.typing {
+font-size: 12px;
+padding-left: 10px;
+color: gray;
+}
+
+/* ================= INPUT ================= */
+.input-area {
+display: flex;
+padding: 10px;
+background: #f0f0f0;
+}
+
+.input-area input {
+flex: 1;
+padding: 10px;
+border-radius: 20px;
+border: none;
+}
+
+.input-area button {
+margin-left: 10px;
+padding: 10px 15px;
+border: none;
+border-radius: 50%;
+background: #075e54;
+color: white;
+cursor: pointer;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    clear: both;
+}
+
+.sent {
+    align-self: flex-end;
+    background: #dcf8c6;
+}
+
+.received {
+    align-self: flex-start;
+    background: white;
+}
+
+.register-btn {
+    margin-top: 10px;
+    background: #007bff;
+}

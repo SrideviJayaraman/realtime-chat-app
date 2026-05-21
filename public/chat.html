@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+
+<!-- Header -->
+<div class="header">
+    <div class="left">
+        <div class="avatar">💬</div>
+        <div>
+            <div class="name">Chat Room</div>
+            <div id="status" class="status">Online</div>
+        </div>
+    </div>
+
+    <button onclick="logout()" class="logout">Logout</button>
+</div>
+
+<!-- Messages -->
+<div id="messages" class="messages"></div>
+
+<!-- Typing Indicator -->
+<div id="typing" class="typing"></div>
+
+<!-- Input -->
+<div class="input-area">
+    <input id="msg" placeholder="Type a message...">
+    <button onclick="sendMessage()">➤</button>
+</div>
+
+</div>
+
+<script>
+function logout() {
+    localStorage.removeItem("username");
+    window.location.href = "index.html";
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+Notification.requestPermission();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
