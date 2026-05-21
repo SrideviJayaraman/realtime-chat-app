@@ -21,9 +21,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // ===== MONGODB =====
-mongoose.connect(
-"mongodb://sridevijayaraman04_db_user:4LXPr9guUq6CQYlw@ac-tdtr255-shard-00-00.d15fgas.mongodb.net:27017,ac-tdtr255-shard-00-01.d15fgas.mongodb.net:27017,ac-tdtr255-shard-00-02.d15fgas.mongodb.net:27017/chatapp?ssl=true&replicaSet=atlas-m7qs0i-shard-0&authSource=admin&retryWrites=true&w=majority"
-)
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(err));
 
@@ -208,9 +206,8 @@ io.on("connection", (socket) => {
 });
 
 // ===== START SERVER =====
-server.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log(
-        "Server running on http://localhost:3000"
-    );
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
