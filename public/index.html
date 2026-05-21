@@ -1,5 +1,9 @@
-<!DOCTYPE html>
+# Corrected `index.html` for Render Deployment
 
+Replace your existing `index.html` file with the code below:
+
+```html
+<!DOCTYPE html>
 <html>
 <head>
     <title>Chat Login</title>
@@ -10,16 +14,15 @@
 <div class="login-card">
     <h2>💬 Chat App</h2>
 
-<input type="text" id="username" placeholder="Username">
-<input type="password" id="password" placeholder="Password">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
-<button onclick="login()">Login</button>
-<button onclick="register()" class="register-btn">Register</button>
-
-
+    <button onclick="login()">Login</button>
+    <button onclick="register()" class="register-btn">Register</button>
 </div>
 
 <script>
+
 async function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -30,7 +33,8 @@ async function login() {
     }
 
     try {
-        const res = await fetch("http://localhost:3000/login", {
+
+        const res = await fetch(`${window.location.origin}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -65,7 +69,8 @@ async function register() {
     }
 
     try {
-        const res = await fetch("http://localhost:3000/register", {
+
+        const res = await fetch(`${window.location.origin}/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -84,7 +89,7 @@ async function register() {
         alert("Server error");
     }
 }
+
 </script>
 </body>
 </html>
-
